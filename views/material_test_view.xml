@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_instance_tree2">
+            <field name="name">test2 tree</field>
+            <field name="model">test_app.material</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="test2 tree">
+                    <field name="name"/>
+                    <field name="count"/>
+                    <field name="material_have"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_instance_form2">
+            <field name="name">test2 form</field>
+            <field name="model">test_app.material</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="count"/>
+                            <field name="material_have"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="test2_action" model="ir.actions.act_window">
+            <field name="name">Material LIST</field>
+            <field name="res_model">test_app.material</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+         <menuitem id="test_root_my_title2_menu"
+                  parent="test_root_my_title"
+                  sequence="111"
+                  action="test2_action"/>
+
+    </data>
+</openerp>

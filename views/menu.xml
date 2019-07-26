@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_instance_tree">
+            <field name="name">test tree</field>
+            <field name="model">test_app.test</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="ticket tree">
+                    <field name="company_name"/>
+                    <field name="material"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_instance_form">
+            <field name="name">ticket form</field>
+            <field name="model">test_app.test</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="company_name"/>
+                            <field name="material"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="test_action" model="ir.actions.act_window">
+            <field name="name">Companies LIST</field>
+            <field name="res_model">test_app.test</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="test_root" name="Companies" sequence="10"/>
+
+        <menuitem id="test_root_my_title"
+                  name="CompanyTest"
+                  parent="test_root"
+                  sequence="100"/>
+
+        <menuitem id="test_root_my_title_menu"
+                  parent="test_root_my_title"
+                  sequence="110"
+                  action="test_action"/>
+
+    </data>
+</openerp>
