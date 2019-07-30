@@ -9,4 +9,3 @@ class Test2(models.Model):
     count = fields.Integer(default=10, readonly=True)
     material_have = fields.Boolean(default=True)
 
-
