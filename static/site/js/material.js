@@ -1,14 +1,24 @@
 class Material {
-  constructor(name, count, exist) {
-    this.name = name;
-    this.count = count;
-    this.exist = exist;
-  }
 
-  print()
-  {
-    document.write(this.name);
-    document.write(this.count);
-    document.write(this.exist);
-  }
+   static fromAny(data) {
+        var material = new Material();
+        if(!data)
+            return material;
+
+        material.name = data.name;
+        material.count = data.count;
+        material.exist = data.exist;
+
+        if(data.price)
+            material.price = data.price;
+
+        return material;
+    }
+
+   print()
+   {
+        document.write(this.name);
+        document.write(this.count);
+        document.write(this.exist);
+   }
 }
