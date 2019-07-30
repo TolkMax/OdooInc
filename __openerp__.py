@@ -24,7 +24,7 @@
     'version': '3.0',
     'category': 'Test',
     'description': """ My OInc """,
-    'summary': 'Create surveys, collect answers and print statistics',
+    'summary': 'Create surveys, co11ect answers and print statistics',
     'author': 'TM',
     'website': 'https://www.odoo.com/page/survey',
     'depends': ['base'],
