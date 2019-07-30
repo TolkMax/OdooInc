@@ -20,12 +20,12 @@
 ##############################################################################
 
 {
-    'name': 'Test App',
-    'version': '2.0',
+    'name': 'OInc Test',
+    'version': '3.0',
     'category': 'Test',
-    'description': """ My test app    """,
-    'summary': 'Create surveys, collect answers and print statistics',
-    'author': 'OpenERP SA',
+    'description': """ My OInc """,
+    'summary': 'Create surveys, co11ect answers and print statistics',
+    'author': 'TM',
     'website': 'https://www.odoo.com/page/survey',
     'depends': ['base'],
     'data': [

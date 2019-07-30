@@ -40,7 +40,7 @@
         <menuitem id="test_root" name="Companies" sequence="10"/>
 
         <menuitem id="test_root_my_title"
-                  name="CompanyTest"
+                  name="OInc Test"
                   parent="test_root"
                   sequence="100"/>
 
