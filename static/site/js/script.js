@@ -4,9 +4,17 @@ function relaodAllMaterial() {
     x.onload = function (){
         save_material = JSON.parse(x.responseText);
         var materialArray = MaterialArray.fromAny(save_material);
-        materialArray.print();
-    }
-    x.send(null);
+        var container = document.getElementById('container');
+        container.innerHTML = materialArray.GetHTMLAllTables();
+       // materialArray.print();
+
+   }
+      x.send(null);
+}
+function update(){
+
+
+
 }
 
 relaodAllMaterial();

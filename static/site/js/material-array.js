@@ -21,4 +21,18 @@ class MaterialArray {
             document.write('</br>');
         }
     }
+
+    GetHTMLAllTables()
+   {
+
+        var result = '';
+
+        for (var i = 0; i < this.items.length; i++){
+            result += "<div class='material-cell'>";
+            result += this.items[i].GetHTMLTable(i);
+            result += "</div>";
+        }
+
+        return result;
+   }
 }
